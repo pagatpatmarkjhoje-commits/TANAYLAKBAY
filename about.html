@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Us</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline class="bg-video" preload="none">
+    <source src="videos/bg.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- HEADER (FIXED STRUCTURE) -->
+<header>
+    <div class="logo">TANAY LAKBAY</div>
+
+    <nav>
+        <a href="home.html" class="nav-link">HOME</a>
+        <a href="explore.html" class="nav-link">PLACES</a>
+        <a href="food.html" class="nav-link">FOOD</a>
+        <a href="culture.html" class="nav-link">CULTURE</a>
+        <a href="about.html" class="nav-link active">ABOUT US</a>
+    </nav>
+</header>
+
+<!-- PROFILES -->
+<section class="places">
+
+    <div class="place">
+        <img src="images/joji.jpg" class="vid profile"
+            data-name="JOJIYAH H"
+            data-info="Main developer of the Tanay Lakbay website.">
+        <div class="text">
+            <h2>JOJIYAH H</h2>
+        </div>
+    </div>
+
+    <div class="place reverse">
+        <img src="images/jenro.jpg" class="vid profile"
+            data-name="JENROAH"
+            data-info="Content researcher and writer.">
+        <div class="text">
+            <h2>JENROAH</h2>
+        </div>
+    </div>
+
+    <div class="place">
+        <img src="images/.jpg" class="vid profile"
+            data-name="DREI4444"
+            data-info="Media editor.">
+        <div class="text">
+            <h2>DREI4444</h2>
+        </div>
+    </div>
+
+</section>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="close">&times;</span>
+        <h2 id="popup-name"></h2>
+        <p id="popup-info"></p>
+    </div>
+</div>
+
+<script src="about.js"></script>
+
+<!-- AUTO ACTIVE NAV -->
+<script>
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});
+</script>
+
+</body>
+</html>

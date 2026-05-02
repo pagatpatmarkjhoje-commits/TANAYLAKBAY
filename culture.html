@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tanay Culture</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="explore.css"> <!-- reuse CSS -->
+
+</head>
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline class="bg-video" preload="none">
+    <source src="videos/bg.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- NAV -->
+<header class="navbar">
+    <div class="logo">TANAY LAKBAY</div>
+
+    <nav>
+        <a href="home.html" class="nav-link">HOME</a>
+        <a href="explore.html" class="nav-link">PLACES</a>
+        <a href="food.html" class="nav-link">FOOD</a>
+        <a href="culture.html" class="nav-link">CULTURE</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+    </nav>
+</header>
+<!-- CULTURE SECTION -->
+<section class="places">
+
+    <!-- RELIGION -->
+    <div class="place">
+        <div class="text">
+            <h2>RELIGIOUS CULTURE</h2>
+            <p>• The people of Tanay are mostly Catholic and celebrate church traditions.</p>
+            <p>• Pilgrimages like Regina Rica are common.</p>
+        </div>
+        <img src="images/religous.jpg" class="vid">
+    </div>
+
+    <!-- NATURE -->
+    <div class="place reverse">
+        <img src="images/adventure.jpg" class="vid">
+        <div class="text">
+            <h2>NATURE AND ADVENTURE</h2>
+            <p>• Known for hiking, camping, and river adventures.</p>
+            <p>• Tourists visit places like Daranak Falls.</p>
+        </div>
+    </div>
+
+    <!-- FARMING -->
+    <div class="place">
+        <div class="text">
+            <h2>FARMING</h2>
+            <p>• Many locals live through farming and small businesses.</p>
+            <p>• Fresh products are part of daily life.</p>
+        </div>
+        <img src="images/farming.jpg" class="vid">
+    </div>
+
+    <!-- FOOD CULTURE -->
+    <div class="place reverse">
+        <img src="images/food.jpg" class="vid">
+        <div class="text">
+            <h2>FOOD</h2>
+            <p>• Known for home-cooked Filipino dishes.</p>
+            <p>• Visitors enjoy local eateries and scenic dining.</p>
+        </div>
+    </div>
+
+    <!-- FESTIVAL -->
+    <div class="place">
+        <div class="text">
+            <h2>FESTIVAL</h2>
+            <p>• Festivals show unity and creativity of people.</p>
+            <p>• Celebrations include parades and giant figures.</p>
+        </div>
+        <img src="images/festival.jpg" class="vid">
+    </div>
+
+</section>
+
+<script src="explore.js"></script>
+
+<!-- AUTO ACTIVE NAV -->
+<script>
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});
+</script>
+<script>
+const links = document.querySelectorAll(".nav-link");
+
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+    }
+});
+</script>
+</body>
+</html>

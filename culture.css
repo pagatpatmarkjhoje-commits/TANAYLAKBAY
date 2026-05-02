@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VIDEO BACKGROUND */
+.bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -2;
+}
+
+/* OVERLAY */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 40, 0, 0.55);
+    z-index: -1;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f1f8e9;
+}
+
+/* NAVBAR */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: rgba(0,0,0,0.3);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+}
+
+.logo {
+    color: #a5d6a7;
+}
+
+nav a {
+    margin-left: 30px;
+    color: #e8f5e9;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #66bb6a;
+}
+
+/* SECTION */
+.places {
+    padding: 50px 80px;
+}
+
+/* CARD */
+.place {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(6px);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+/* REVERSE */
+.place.reverse {
+    flex-direction: row-reverse;
+}
+
+/* TEXT */
+.text {
+    width: 50%;
+}
+
+.text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.text p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.text span {
+    color: #a5d6a7;
+    font-size: 13px;
+}
+
+/* VIDEO */
+.vid {
+    width: 340px;
+    height: 210px;
+    border-radius: 12px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.vid:hover {
+    transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .place {
+        flex-direction: column;
+    }
+
+    .text, .vid {
+        width: 100%;
+    }
+}
+/* ACTIVE NAV LINK */
+.nav-link {
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #66bb6a;
+}
+
+/* ACTIVE PAGE */
+.nav-link.active {
+    color: #4caf50;
+}
+
+/* OPTIONAL: underline effect */
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: #4caf50;
+}
+.map-link {
+    color: #a5d6a7;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.map-link:hover {
+    color: #4caf50;
+    text-decoration: underline;
+}
+/* ANIMATION */
+.explore {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.7s;
+}
+
+.explore.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ===== GLOBAL MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+    /* GENERAL */
+    body {
+        font-size: 14px;
+    }
+
+    /* HEADER */
+    header, .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* NAV */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    /* SECTIONS */
+    section, .places, .foods {
+        padding: 20px;
+        margin: 0;
+    }
+
+    /* CARDS */
+    .place, .food {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    /* TEXT */
+    .text {
+        width: 100% !important;
+    }
+
+    .text h2 {
+        font-size: 20px;
+    }
+
+    .text p {
+        font-size: 13px;
+    }
+
+    /* IMAGES & VIDEOS */
+    .vid, .food img {
+        width: 100% !important;
+        height: auto;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .explore-btn {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+
+    /* CARDS SECTION */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* ORIGIN SECTION */
+    .origin {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .origin .text {
+        width: 100%;
+    }
+
+    .slider img {
+        width: 100%;
+    }
+}

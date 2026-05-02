@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tanay Food</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="explore.css"> <!-- reuse mo css mo -->
+
+</head>
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline class="bg-video" preload="none">
+    <source src="videos/bg.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- NAV -->
+<header class="navbar">
+    <div class="logo">TANAY LAKBAY</div>
+
+    <nav>
+        <a href="home.html" class="nav-link">HOME</a>
+        <a href="explore.html" class="nav-link">PLACES</a>
+        <a href="food.html" class="nav-link">FOOD</a>
+        <a href="culture.html" class="nav-link">CULTURE</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+    </nav>
+</header>
+
+<!-- FOOD SECTION (same class: places para gumana css mo) -->
+<section class="places">
+
+    <!-- UBE -->
+    <div class="place">
+        <div class="text">
+            <h2>UBE HALAYA</h2>
+            <p>A sweet dessert made from mashed purple yam, milk, and sugar.</p>
+            <p>Thick and creamy, usually served as dessert.</p>
+        </div>
+        <img src="images/ube.jpg" class="vid">
+    </div>
+
+    <!-- KESO -->
+    <div class="place reverse">
+        <img src="images/kesong puti.jpg" class="vid">
+        <div class="text">
+            <h2>KESONG PUTI</h2>
+            <p>Soft white cheese made from carabao’s milk.</p>
+            <p>Slightly salty and eaten with bread or rice cakes.</p>
+        </div>
+    </div>
+
+    <!-- BREAD -->
+    <div class="place">
+        <div class="text">
+            <h2>TINAPAYAN BREAD</h2>
+            <p>Artisan-style bread made by local bakeries.</p>
+            <p>Known for unique flavors and freshness.</p>
+        </div>
+        <img src="images/bread.jpg" class="vid">
+    </div>
+
+    <!-- INIHAW -->
+    <div class="place reverse">
+        <img src="images/hto.jpg" class="vid">
+        <div class="text">
+            <h2>INIHAW NA HITO</h2>
+            <p>Fish grilled over charcoal.</p>
+            <p>Served with vinegar or soy sauce.</p>
+        </div>
+    </div>
+
+    <!-- CHICKEN -->
+    <div class="place">
+        <div class="text">
+            <h2>NATIVE CHICKEN</h2>
+            <p>Traditional soup made with native chicken.</p>
+            <p>Rich and flavorful dish.</p>
+        </div>
+        <img src="images/tinola.jpg" class="vid">
+    </div>
+
+</section>
+
+<script src="explore.js"></script>
+
+<!-- ACTIVE NAV FIX -->
+<script>
+const currentPage = window.location.pathname.split("/").pop();
+
+document.querySelectorAll(".nav-link").forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+    }
+});
+</script>
+
+</body>
+</html>

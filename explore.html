@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Explore Tanay</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="explore.css">
+
+</head>
+<body>
+
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop playsinline class="bg-video" preload="none">
+    <source src="videos/bg.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<header class="navbar">
+    <div class="logo">TANAY LAKBAY</div>
+
+    <nav>
+        <a href="home.html" class="nav-link">HOME</a>
+        <a href="explore.html" class="nav-link">PLACES</a>
+        <a href="food.html" class="nav-link">FOOD</a>
+        <a href="culture.html" class="nav-link">CULTURE</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+    </nav>
+</header>
+<!-- PLACES -->
+<section class="places">
+
+    <div class="place">
+        <div class="text">
+            <h2>DARANAK FALLS</h2>
+            <p>Famous 14-meter waterfall with clear water perfect for swimming.</p>
+           <a href="https://www.google.com/maps?q=Barangay+Sampaloc+Tanay+Rizal"target="_blank" class="map-link">
+   📍 Barangay Sampaloc, Tanay
+        </div>
+        <video src="videos/DARANAK.mp4" controls class="vid"></video>
+</a>
+    </div>
+
+    <div class="place reverse">
+        <video src="videos/DARAITAN.mp4" controls class="vid"></video>
+        <div class="text">
+            <h2>DARAITAN RIVER</h2>
+            <p>Known for Tinipak River with white marble rocks and clear water.</p>
+       <a href="https://www.google.com/maps?q=Daraitan+Tanay+Rizal" target="_blank" class="map-link">
+📍 Barangay Daraitan, Tanay
+</a>
+</a>
+        </div>
+    </div>
+
+    <div class="place">
+        <div class="text">
+            <h2>BATLAG FALLS</h2>
+            <p>Peaceful multi-level waterfall with relaxing nature views.</p>
+           <a href="https://www.google.com/maps?q=14.5451909,121.3095171"
+   target="_blank"
+   class="map-link">
+   📍 Barangay Sampaloc, Tanay 
+</a>
+        </div>
+        <video src="videos/BATLAG.mp4" controls class="vid"></video>
+    </div>
+
+    <div class="place reverse">
+        <video src="videos/TINAPAK.mp4" controls class="vid"></video>
+        <div class="text">
+            <h2>TINIPAK RIVER</h2>
+            <p>Crystal-clear river with stunning white rock formations.</p>
+           <a href="https://www.google.com/maps?q=14.602854,121.444357"
+   target="_blank"
+   class="map-link">
+   📍 Barangay Daraitan, Tanay (Tinipak River)</a>
+        </div>
+    </div>
+
+    <div class="place">
+        <div class="text">
+            <h2>CALINAWAN CAVE</h2>
+            <p>Historic cave used during wars with limestone formations.</p>
+        <a href="https://www.google.com/maps?q=Calinawan+Cave+Tanay+Rizal" target="_blank" class="map-link">
+📍 Barangay Tandang Kutyo, Tanay
+</a>
+        </div>
+        <video src="videos/CALINAWAN CAVE.mp4" controls class="vid"></video>
+    </div>
+
+</section>
+
+<script src="explore.js"></script>
+
+<script>
+const links = document.querySelectorAll(".nav-link");
+
+links.forEach(link => {
+    if (link.href === window.location.href) {
+        link.classList.add("active");
+    }
+});
+</script>
+
+</script>
+</body>
+</html>
